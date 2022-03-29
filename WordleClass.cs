@@ -55,7 +55,7 @@ namespace WordleSolver
             this.Data.Add(row);
         }
 
-        public string CharToColor(char color)
+        public string CharToColor(char color) // probably doesn't work but thought I'd include this anyways
         {
             switch (color)
             {
@@ -93,7 +93,7 @@ namespace WordleSolver
 
         public WordleClass()
         {
-            this.Words = new List<string>(File.ReadAllLines(@"C:\Users\User\source\repos\WordleCheat\Answers.txt"));
+            this.Words = new List<string>(File.ReadAllLines(Directory.GetCurrentDirectory() + @"\Answers.txt")); // Make sure path fits your directory
             this.Data = new Information();
             this.LE = new LetterEliminator();
         }
