@@ -14,7 +14,7 @@ namespace WordleCheat
         public LetterEliminator()
         {
             this.Letters = new Dictionary<char, double> { { 'a', 8.9 }, { 'b', 2.5 }, { 'c', 3.3 }, { 'd', 3.9 }, { 'e', 10.3 }, { 'f', 1.8 }, { 'g', 2.5 }, { 'h', 2.7 }, { 'i', 5.9 }, { 'j', 0.4 }, { 'k', 2.1 }, { 'l', 5.5 }, { 'm', 3d }, { 'n', 4.5 }, { 'o', 6.7 }, { 'p', 3.1 }, { 'q', 0.2 }, { 'r', 6.5 }, { 's', 10.4 }, { 't', 5.2 }, { 'u', 3.8 }, { 'v', 1.1 }, { 'w', 1.5 }, { 'x', 0.5 }, { 'y', 3.1 }, { 'z', 0.6 } };
-            this.Words = new List<string>(File.ReadAllLines(@"C:\Users\User\source\repos\WordleCheat\Takes.txt"));
+            this.Words = new List<string>(File.ReadAllLines(Directory.GetCurrentDirectory() + @"\Takes.txt")); // Make sure it fits your directory path
         }
 
         public void Update(Information data)
